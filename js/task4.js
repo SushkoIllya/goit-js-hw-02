@@ -1,4 +1,12 @@
-const formatString = string => string.length > 40 ? `${string.slice(0, 41)}...` : string;
+const formatString = function(string) {
+ 
+ let str = '';
+    
+  if (string.length > 40) {str = string.substr(0,40); str += '...';}
+        else {str = string}   
+
+return(str);
+  };
 
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
